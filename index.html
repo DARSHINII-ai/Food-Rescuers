@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodBridge | Stop Food Waste, Feed Our Neighbours</title>
+    <meta name="description" content="FoodBridge connects restaurants, hotels, events and homes with NGOs and communities, so surplus food reaches people who need it." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas class="grain-field" id="grain-field" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <a href="#top" class="brand" aria-label="FoodBridge home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">FoodBridge</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#problem">The problem</a>
+        <a href="#solution">Our solution</a>
+        <a href="#how">How it works</a>
+        <a href="#impact">Impact</a>
+        <a href="#stories">Stories</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false">
+          <span class="sound-dot" aria-hidden="true"></span>
+          <span class="sound-label">Sound off</span>
+        </button>
+        <a class="btn btn-small" href="#join">Donate food</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="photo-wall" aria-hidden="true">
+          <div class="photo-col photo-col-up">
+            <img src="https://images.pexels.com/photos/8818667/pexels-photo-8818667.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/35008222/pexels-photo-35008222.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/13084520/pexels-photo-13084520.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/5775684/pexels-photo-5775684.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/8818667/pexels-photo-8818667.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/35008222/pexels-photo-35008222.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/13084520/pexels-photo-13084520.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/5775684/pexels-photo-5775684.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+          </div>
+          <div class="photo-col photo-col-down">
+            <img src="https://images.pexels.com/photos/29148133/pexels-photo-29148133.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/17223838/pexels-photo-17223838.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/36840077/pexels-photo-36840077.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/8818723/pexels-photo-8818723.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/29148133/pexels-photo-29148133.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/17223838/pexels-photo-17223838.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/36840077/pexels-photo-36840077.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/8818723/pexels-photo-8818723.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+          </div>
+          <div class="photo-col photo-col-up photo-col-slow">
+            <img src="https://images.pexels.com/photos/17223837/pexels-photo-17223837.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/14798273/pexels-photo-14798273.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/8818657/pexels-photo-8818657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/34968009/pexels-photo-34968009.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/17223837/pexels-photo-17223837.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/14798273/pexels-photo-14798273.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/8818657/pexels-photo-8818657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+            <img src="https://images.pexels.com/photos/34968009/pexels-photo-34968009.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" loading="lazy" />
+          </div>
+        </div>
+        <div class="hero-veil" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="eyebrow" data-hero-fade>Team Food Rescuers, presents FoodBridge</p>
+          <h1 class="hero-title" id="hero-title" data-hero-title>
+            <span class="word">Good</span> <span class="word">food</span>
+            <span class="word">shouldn't</span> <span class="word">end</span>
+            <span class="word">up</span> <span class="word accent">in</span>
+            <span class="word accent">the</span> <span class="word accent">bin.</span>
+          </h1>
+          <p class="hero-sub" data-hero-fade>
+            FoodBridge carries surplus from restaurants, hotels, events and homes to the NGOs and neighbours who need it, usually within the same day.
+          </p>
+          <div class="hero-actions" data-hero-fade>
+            <a class="btn btn-primary" href="#join">Donate food now</a>
+            <a class="btn btn-ghost" href="#solution">See the ripple effect</a>
+          </div>
+        </div>
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span>Rescue. Share. Repeat.</span><i></i>
+            <span>Every plate counts</span><i></i>
+            <span>Surplus today, support tomorrow</span><i></i>
+            <span>Waste less. Feed more.</span><i></i>
+            <span>Rescue. Share. Repeat.</span><i></i>
+            <span>Every plate counts</span><i></i>
+            <span>Surplus today, support tomorrow</span><i></i>
+            <span>Waste less. Feed more.</span><i></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section class="section problem" id="problem" aria-labelledby="problem-title">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">The problem</p>
+          <h2 class="h2" id="problem-title">Food is wasted on one side of the street and missed on the other.</h2>
+        </div>
+        <div class="problem-grid">
+          <article class="stat-card" data-reveal>
+            <div class="stat-number"><span data-count="33" data-suffix="%">0</span></div>
+            <p>of all food produced worldwide is lost or wasted each year, according to the FAO.</p>
+          </article>
+          <article class="stat-card stat-card-accent" data-reveal>
+            <div class="stat-number"><span data-count="1.3" data-decimals="1" data-suffix="bn">0</span></div>
+            <p>tonnes of food lost or wasted every year, much of it still good to eat.</p>
+          </article>
+          <article class="stat-card" data-reveal>
+            <div class="stat-number"><span data-count="670" data-suffix="m+">0</span></div>
+            <p>people still faced hunger in 2024, while bins overflow at the end of every service.</p>
+          </article>
+        </div>
+        <div class="waste-meter" data-reveal aria-hidden="true">
+          <div class="waste-bar"><span class="waste-fill"></span></div>
+          <div class="waste-labels"><span>Produced</span><span>Wasted</span></div>
+        </div>
+      </section>
+
+      <!-- Solution mindmap -->
+      <section class="section solution" id="solution" aria-labelledby="solution-title">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Our solution</p>
+          <h2 class="h2" id="solution-title">One extra plate. Four ripples of good.</h2>
+          <p class="note">FoodBridge matches your surplus with a verified NGO that collects within hours, so every donation reaches a table.</p>
+        </div>
+        <div class="mindmap" data-mindmap>
+          <svg class="mindmap-lines" data-mm-lines aria-hidden="true"></svg>
+          <article class="mm-branch mm-left-top" data-mm-branch>
+            <span class="mm-index">01</span>
+            <h3>Someone eats tonight</h3>
+            <p>A warm meal reaches a family who might otherwise have skipped dinner.</p>
+          </article>
+          <article class="mm-branch mm-left-bottom" data-mm-branch>
+            <span class="mm-index">02</span>
+            <h3>Less food in landfill</h3>
+            <p>Good food stops rotting in bins and starts doing the job it was grown for.</p>
+          </article>
+          <div class="mm-center" data-mm-center>
+            <span class="mm-kicker">Your extra food</span>
+            <strong>Becomes someone's meal</strong>
+            <a class="btn btn-primary btn-small" href="#join">Donate now</a>
+          </div>
+          <article class="mm-branch mm-right-top" data-mm-branch>
+            <span class="mm-index">03</span>
+            <h3>NGOs stay stocked</h3>
+            <p>Reliable donations let kitchens plan, cook and serve every single day.</p>
+          </article>
+          <article class="mm-branch mm-right-bottom" data-mm-branch>
+            <span class="mm-index">04</span>
+            <h3>Your impact, visible</h3>
+            <p>Follow each rescue and see exactly what your donation made possible.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section how" id="how" aria-labelledby="how-title">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">How it works</p>
+          <h2 class="h2" id="how-title">From surplus to supper in four moves.</h2>
+        </div>
+        <div class="steps">
+          <svg class="steps-path" viewBox="0 0 1000 56" preserveAspectRatio="none" aria-hidden="true">
+            <path id="bridge-path" pathLength="1" d="M0 28 H1000" />
+          </svg>
+          <ol class="steps-list">
+            <li class="step" data-step>
+              <span class="step-dot">1</span>
+              <h3>Post your surplus</h3>
+              <p>Snap a photo and add quantity and pickup window in under a minute.</p>
+            </li>
+            <li class="step" data-step>
+              <span class="step-dot">2</span>
+              <h3>We find a match</h3>
+              <p>The nearest verified NGO accepts the donation with one tap.</p>
+            </li>
+            <li class="step" data-step>
+              <span class="step-dot">3</span>
+              <h3>Pickup is coordinated</h3>
+              <p>A volunteer is routed to you, with live status for everyone involved.</p>
+            </li>
+            <li class="step" data-step>
+              <span class="step-dot">4</span>
+              <h3>Food reaches a table</h3>
+              <p>Meals are served the same day, and you see the impact you created.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section features" id="features" aria-labelledby="features-title">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Key features</p>
+          <h2 class="h2" id="features-title">Built for the way food really moves.</h2>
+        </div>
+        <div class="bento">
+          <article class="bento-card bento-large tilt" data-reveal>
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14" /><path d="M24 14v20M14 24h20" /></svg>
+            </div>
+            <h3>Food donation in seconds</h3>
+            <p>Log leftovers, bakery stock or event buffet trays with a photo, quantity and allergen notes.</p>
+          </article>
+          <article class="bento-card tilt" data-reveal>
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M8 34 L20 14 L28 26 L34 18 L40 34 Z" /></svg>
+            </div>
+            <h3>NGO partnerships</h3>
+            <p>Verified partners with clear needs and capacity.</p>
+          </article>
+          <article class="bento-card tilt" data-reveal>
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M6 30 Q24 6 42 30" /><circle cx="6" cy="30" r="3" /><circle cx="42" cy="30" r="3" /></svg>
+            </div>
+            <h3>Pickup coordination</h3>
+            <p>Route-aware volunteers and time windows that actually work.</p>
+          </article>
+          <article class="bento-card bento-wide tilt" data-reveal>
+            <div class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="16" cy="18" r="6" /><circle cx="32" cy="18" r="6" /><path d="M6 40c2-8 8-10 10-10s8 2 10 10M22 40c2-8 8-10 10-10s8 2 10 10" /></svg>
+            </div>
+            <h3>Community participation</h3>
+            <p>Neighbours, schools and businesses join local rescue circles and watch their streets get fed.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Impact -->
+      <section class="section impact" id="impact" aria-labelledby="impact-title">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Impact</p>
+          <h2 class="h2" id="impact-title">Every rescued meal leaves a visible trail.</h2>
+          <p class="note">Figures below are illustrative pilot targets for the FoodBridge demo.</p>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-metric" data-reveal>
+            <span class="impact-value"><span data-count="1200000" data-format="compact">0</span></span>
+            <span class="impact-label">meals rescued</span>
+            <span class="impact-bar"><span data-fill="0.82"></span></span>
+          </div>
+          <div class="impact-metric" data-reveal>
+            <span class="impact-value"><span data-count="480" data-suffix=" t">0</span></span>
+            <span class="impact-label">tonnes of food diverted</span>
+            <span class="impact-bar"><span data-fill="0.64"></span></span>
+          </div>
+          <div class="impact-metric" data-reveal>
+            <span class="impact-value"><span data-count="320">0</span></span>
+            <span class="impact-label">partner NGOs</span>
+            <span class="impact-bar"><span data-fill="0.45"></span></span>
+          </div>
+          <div class="impact-metric" data-reveal>
+            <span class="impact-value"><span data-count="14000" data-format="compact">0</span></span>
+            <span class="impact-label">active volunteers</span>
+            <span class="impact-bar"><span data-fill="0.71"></span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stories -->
+      <section class="section stories" id="stories" aria-labelledby="stories-title">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Community stories</p>
+          <h2 class="h2" id="stories-title">Faces behind every rescued plate.</h2>
+          <p class="note">Illustrative stories that show the kind of impact FoodBridge is built for.</p>
+        </div>
+        <div class="story-track" data-story-track>
+          <article class="story-card" data-reveal>
+            <img src="https://images.pexels.com/photos/9345673/pexels-photo-9345673.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="A home cook in traditional attire holding a tray of freshly made food" loading="lazy" />
+            <div class="story-body">
+              <p class="quote">"I cook for my family anyway. Now the extra dal reaches a shelter instead of the back of my fridge."</p>
+              <p class="by">Meera, home cook in Pune</p>
+            </div>
+          </article>
+          <article class="story-card" data-reveal>
+            <img src="https://images.pexels.com/photos/6646941/pexels-photo-6646941.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Volunteers organising food donations outdoors" loading="lazy" />
+            <div class="story-body">
+              <p class="quote">"After every wedding we used to throw away trays. Now a pickup is booked before the guests leave."</p>
+              <p class="by">Rahul, wedding caterer in Jaipur</p>
+            </div>
+          </article>
+          <article class="story-card" data-reveal>
+            <img src="https://images.pexels.com/photos/5909876/pexels-photo-5909876.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="An older woman serving food to children on the ground" loading="lazy" />
+            <div class="story-body">
+              <p class="quote">"Children should never have to ask twice for a meal. FoodBridge brings food to our kitchen while it is still warm."</p>
+              <p class="by">Shanti, community kitchen volunteer</p>
+            </div>
+          </article>
+          <article class="story-card" data-reveal>
+            <img src="https://images.pexels.com/photos/28945957/pexels-photo-28945957.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="A smiling man in a turban in a bright setting" loading="lazy" />
+            <div class="story-body">
+              <p class="quote">"My dhaba feeds hundreds a day. Our surplus now feeds a neighbourhood school instead of a bin."</p>
+              <p class="by">Sanjay, dhaba owner in Amritsar</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Call to action -->
+      <section class="section join" id="join" aria-labelledby="join-title">
+        <div class="join-inner">
+          <div class="join-copy" data-reveal>
+            <p class="eyebrow">Be the bridge</p>
+            <h2 class="h2" id="join-title">Your extra plate could be someone's first meal this week.</h2>
+            <p class="join-sub">Choose how you want to help, then join the circle. Pledges show up live on this page.</p>
+            <div class="pledge-totals" aria-live="polite">
+              <div>
+                <span class="total-value" id="total-pledges">0</span>
+                <span class="total-label">people have joined</span>
+              </div>
+              <div class="goal">
+                <div class="goal-bar"><span id="goal-fill"></span></div>
+                <span class="total-label" id="goal-text">Goal: 10,000 pledges</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="pledge-form" id="pledge-form" novalidate data-reveal>
+            <fieldset class="pledge-choices">
+              <legend>I want to</legend>
+              <label class="choice">
+                <input type="radio" name="pledge_type" value="donate" checked />
+                <span>Donate food</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="pledge_type" value="volunteer" />
+                <span>Volunteer</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="pledge_type" value="partner" />
+                <span>Partner as an NGO</span>
+              </label>
+            </fieldset>
+            <label class="field">
+              <span>Your name</span>
+              <input type="text" name="name" maxlength="80" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" maxlength="254" autocomplete="email" required />
+            </label>
+            <button class="btn btn-primary btn-block" type="submit" id="pledge-submit">
+              <span class="btn-text">Join FoodBridge</span>
+            </button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-name">FoodBridge</span>
+          </a>
+          <p>Built by Team Food Rescuers. Turning surplus into shared tables.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <div>
+            <h4>Explore</h4>
+            <a href="#problem">The problem</a>
+            <a href="#solution">Our solution</a>
+            <a href="#impact">Impact</a>
+          </div>
+          <div>
+            <h4>Get involved</h4>
+            <a href="#join">Donate food</a>
+            <a href="#join">Volunteer</a>
+            <a href="#join">Partner as an NGO</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="mailto:hello@foodbridge.org">hello@foodbridge.org</a>
+            <span>Mon to Sat, 9:00 to 18:00</span>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>Stop food waste. Feed our neighbours.</span>
+        <span>Team Food Rescuers, AI Prompt Battle</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
